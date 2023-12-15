@@ -1,0 +1,13 @@
+# credentials for connect to postgresql database
+spring:
+  datasource:
+    url: jdbc:postgresql://db.eigzbbtaqbpehuzcsjpj.supabase.co:5432/postgres
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: -GvFte*ze9Phg7w
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgresSQLDialect
+  h2:
+    console:
+      enabled: false

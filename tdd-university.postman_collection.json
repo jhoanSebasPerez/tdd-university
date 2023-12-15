@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "a7e42610-29e2-4807-a0e2-5bc39697cfa0",
+		"name": "tdd-university",
+		"description": "Simple api to demostrate TDD methodology by using courses and their students",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "7430247"
+	},
+	"item": [
+		{
+			"name": "courses requests",
+			"item": [
+				{
+					"name": "Find course by courseId",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/v1/courses/java101"
+					},
+					"response": []
+				},
+				{
+					"name": "Create course",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users request",
+			"item": [
+				{
+					"name": "find a user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "password1",
+								"username": "user1"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{base_url}}/users/login"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidXNlcjEiLCJleHAiOjE3MDIzMjA1MjcsImlhdCI6MTcwMjMxMzMyNywiYXV0aG9yaXRpZXMiOiJST0xFX2FkbWluIFJPTEVfdXNlciJ9.keOHT1yBc6MKDjgqLSIKaES3mwQh3ozjyIGnYJJzUtufx517e6GbcpAMHedLbyUYezGLadlbNxmRynMighOnkOgptp32aV-EHuYopssQ45E8s8OLMafmAqhaI0TTcLEc5v8NMadHIrLZZnzMD2UQWSQGVv98akxYNxfT1Qff2D_DyVOh5V_JqyZMZXYviSp3jE2_nxS8tpw3BMwtlxGMqya89vwm-Mtva-HAFPP3RnxIBs5VdqAXePNosMJv6h6_T43hJVrr-fFpTkXTHmyWZyaV-wXmg5D5FY6Ml2iicxJyMNnEiSkTl8GEwxtVzVxghyh6RTGSOa03gOI8FKoWEg"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8080/api/v1",
+			"type": "string"
+		}
+	]
+}
